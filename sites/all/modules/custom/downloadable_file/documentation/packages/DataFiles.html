@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
@@ -62,67 +62,60 @@
 </li>
 <li class="nav-header">
 <i class="icon-custom icon-function"></i> Functions</li>
-<li class="function  "><a href="#download_file_post_render" title='download_file_post_render :: Re-writes the file links to display "human readable" filesize.'><span class="description">Re-writes the file links to display "human readable" filesize.</span><pre>download_file_post_render</pre></a></li>
-<li class="function  "><a href="#downloadable_file_admin_ajax_handler" title='downloadable_file_admin_ajax_handler :: Worker function called by all "button-driven" actions from the Administration
+<li class="function  "><a href="#function_download_file_post_render" title='download_file_post_render :: Re-writes the file links to display "human readable" filesize.'><span class="description">Re-writes the file links to display "human readable" filesize.</span><pre>download_file_post_render</pre></a></li>
+<li class="function  "><a href="#function_downloadable_file_admin_ajax_handler" title='downloadable_file_admin_ajax_handler :: Worker function called by all "button-driven" actions from the Administration
 page.'><span class="description">Worker function called by all "button-driven" actions from the Administration
 page.</span><pre>downloadable_file_admin_ajax_handler</pre></a></li>
-<li class="function  "><a href="#downloadable_file_admin_form" title="downloadable_file_admin_form :: Function used to construct the Administration page for this
+<li class="function  "><a href="#function_downloadable_file_admin_form" title="downloadable_file_admin_form :: Function used to construct the Administration page for this
 module."><span class="description">Function used to construct the Administration page for this
 module.</span><pre>downloadable_file_admin_form</pre></a></li>
-<li class="function  "><a href="#downloadable_file_block_contents" title='downloadable_file_block_contents :: Builder method for the html to be displayed in the "Related files" block.'><span class="description">Builder method for the html to be displayed in the "Related files" block.</span><pre>downloadable_file_block_contents</pre></a></li>
-<li class="function  "><a href="#downloadable_file_views_query_alter" title="downloadable_file_views_query_alter :: Drupal 7 implementation of hook_views_query_alter."><span class="description">Drupal 7 implementation of hook_views_query_alter.</span><pre>downloadable_file_views_query_alter</pre></a></li>
-<li class="function  "><a href="#errAdd" title="errAdd :: Convenience method to add an error message to an error array map."><span class="description">Convenience method to add an error message to an error array map.</span><pre>errAdd</pre></a></li>
-<li class="function  "><a href="#getFileSizeHumanReadable" title="getFileSizeHumanReadable :: Convenience method to calculate, in human-readable text, the
+<li class="function  "><a href="#function_downloadable_file_block_contents" title='downloadable_file_block_contents :: Builder method for the html to be displayed in the "Related files" block.'><span class="description">Builder method for the html to be displayed in the "Related files" block.</span><pre>downloadable_file_block_contents</pre></a></li>
+<li class="function  "><a href="#function_downloadable_file_views_query_alter" title="downloadable_file_views_query_alter :: Drupal 7 implementation of hook_views_query_alter."><span class="description">Drupal 7 implementation of hook_views_query_alter.</span><pre>downloadable_file_views_query_alter</pre></a></li>
+<li class="function  "><a href="#function_errAdd" title="errAdd :: Convenience method to add an error message to an error array map."><span class="description">Convenience method to add an error message to an error array map.</span><pre>errAdd</pre></a></li>
+<li class="function  "><a href="#function_fixMungedFilenames" title='fixMungedFilenames :: Fixes the filenames download nodes that have been "munged" (filename has a
+"_." in it).'><span class="description">Fixes the filenames download nodes that have been "munged" (filename has a
+"_." in it).</span><pre>fixMungedFilenames</pre></a></li>
+<li class="function  "><a href="#function_getFileSizeHumanReadable" title="getFileSizeHumanReadable :: Convenience method to calculate, in human-readable text, the
 size of something given the bytes and precision."><span class="description">Convenience method to calculate, in human-readable text, the
 size of something given the bytes and precision.</span><pre>getFileSizeHumanReadable</pre></a></li>
-<li class="function  "><a href="#getShortNames" title='getShortNames :: Simple getter that returns a map from common orgnism shortnames to their
+<li class="function  "><a href="#function_getShortNames" title='getShortNames :: Simple getter that returns a map from common orgnism shortnames to their
 full names in "genus-species" format.'><span class="description">Simple getter that returns a map from common orgnism shortnames to their
 full names in "genus-species" format.</span><pre>getShortNames</pre></a></li>
-<li class="function  "><a href="#getSortedFiles" title="getSortedFiles :: Returns a max heap object of ranked files."><span class="description">Returns a max heap object of ranked files.</span><pre>getSortedFiles</pre></a></li>
-<li class="function  "><a href="#getUniqueListOrgTidsFromDownloads" title="getUniqueListOrgTidsFromDownloads :: Returns unique list of organisms referenced in exisiting data files (downloads)."><span class="description">Returns unique list of organisms referenced in exisiting data files (downloads).</span><pre>getUniqueListOrgTidsFromDownloads</pre></a></li>
+<li class="function  "><a href="#function_getSortedFiles" title="getSortedFiles :: Returns a max heap object of ranked files."><span class="description">Returns a max heap object of ranked files.</span><pre>getSortedFiles</pre></a></li>
+<li class="function  "><a href="#function_getUniqueListOrgTidsFromDownloads" title="getUniqueListOrgTidsFromDownloads :: Returns unique list of organisms referenced in exisiting data files (downloads)."><span class="description">Returns unique list of organisms referenced in exisiting data files (downloads).</span><pre>getUniqueListOrgTidsFromDownloads</pre></a></li>
 <li class="nav-header">
 <i class="icon-custom icon-class"></i> Classes</li>
 <li><a href="#DownloadSimpleHeap" title='This extension of the SplHeap overrides the compare function to
 allow us to "rank" our "Data file/Download" nodes.'>DownloadSimpleHeap</a></li>
 <li class="nav-header">
 <i class="icon-custom icon-constant"></i> Constants</li>
-<li class="constant  "><a href="#DATA_FILE_DOWNLOAD_LINK_CSS_CLASS" title="DATA_FILE_DOWNLOAD_LINK_CSS_CLASS :: CSS class used by jquery to locate file downloads and
-increment the download count."><span class="description">CSS class used by jquery to locate file downloads and
-increment the download count.</span><pre>DATA_FILE_DOWNLOAD_LINK_CSS_CLASS</pre></a></li>
-<li class="constant  "><a href="#DB_PASSWORD" title="DB_PASSWORD :: Password for the DB_USER."><span class="description">Password for the DB_USER.</span><pre>DB_PASSWORD</pre></a></li>
-<li class="constant  "><a href="#DB_USER" title="DB_USER :: Public user in the drupal database that is allowed to issue SELECT queries."><span class="description">Public user in the drupal database that is allowed to issue SELECT queries.</span><pre>DB_USER</pre></a></li>
-<li class="constant  "><a href="#DL_COUNT_TAG" title="DL_COUNT_TAG :: "><span class="description">DL_COUNT_TAG</span><pre>DL_COUNT_TAG</pre></a></li>
-<li class="constant  "><a href="#DOWNLOAD_COUNT_NODE_ID_GET_KEY" title="DOWNLOAD_COUNT_NODE_ID_GET_KEY :: Node id key name for the file increment php counter."><span class="description">Node id key name for the file increment php counter.</span><pre>DOWNLOAD_COUNT_NODE_ID_GET_KEY</pre></a></li>
-<li class="constant  "><a href="#DOWNLOAD_COUNT_VERSION_ID_GET_KEY" title="DOWNLOAD_COUNT_VERSION_ID_GET_KEY :: Version id key name for the file increment php counter."><span class="description">Version id key name for the file increment php counter.</span><pre>DOWNLOAD_COUNT_VERSION_ID_GET_KEY</pre></a></li>
-<li class="constant  "><a href="#DRUPAL_ROOT" title="DRUPAL_ROOT :: "><span class="description">DRUPAL_ROOT</span><pre>DRUPAL_ROOT</pre></a></li>
-<li class="constant  "><a href="#FEATURED_DOWNLOAD_TAG_TEXT" title="FEATURED_DOWNLOAD_TAG_TEXT :: Display string of the 'Featured Download' tag (actually a taxon in the
-tags taxonomy)."><span class="description">Display string of the 'Featured Download' tag (actually a taxon in the
-tags taxonomy).</span><pre>FEATURED_DOWNLOAD_TAG_TEXT</pre></a></li>
-<li class="constant  "><a href="#RELATED_FILES_DOWNLOADED_COUNT_THRESHOLD" title="RELATED_FILES_DOWNLOADED_COUNT_THRESHOLD :: Threshold value for minimum number of times a file is downloaded before it
-becomes 'more important'."><span class="description">Threshold value for minimum number of times a file is downloaded before it
-becomes 'more important'.</span><pre>RELATED_FILES_DOWNLOADED_COUNT_THRESHOLD</pre></a></li>
-<li class="constant  "><a href="#RELATED_FILES_VIEW_LIMIT" title="RELATED_FILES_VIEW_LIMIT :: How many files are to be dispalyed in the 'Related files' block on organism
-pages."><span class="description">How many files are to be dispalyed in the 'Related files' block on organism
-pages.</span><pre>RELATED_FILES_VIEW_LIMIT</pre></a></li>
+<li class="constant  "><a href="#constant_DATA_FILE_DOWNLOAD_LINK_CSS_CLASS" title="DATA_FILE_DOWNLOAD_LINK_CSS_CLASS :: "><span class="description">DATA_FILE_DOWNLOAD_LINK_CSS_CLASS</span><pre>DATA_FILE_DOWNLOAD_LINK_CSS_CLASS</pre></a></li>
+<li class="constant  "><a href="#constant_DATA_FILE_NODE_VIEW_BASENAME" title="DATA_FILE_NODE_VIEW_BASENAME :: "><span class="description">DATA_FILE_NODE_VIEW_BASENAME</span><pre>DATA_FILE_NODE_VIEW_BASENAME</pre></a></li>
+<li class="constant  "><a href="#constant_DB_PASSWORD" title="DB_PASSWORD :: "><span class="description">DB_PASSWORD</span><pre>DB_PASSWORD</pre></a></li>
+<li class="constant  "><a href="#constant_DB_USER" title="DB_USER :: "><span class="description">DB_USER</span><pre>DB_USER</pre></a></li>
+<li class="constant  "><a href="#constant_DL_COUNT_TAG" title="DL_COUNT_TAG :: "><span class="description">DL_COUNT_TAG</span><pre>DL_COUNT_TAG</pre></a></li>
+<li class="constant  "><a href="#constant_DOWNLOAD_COUNT_NODE_ID_GET_KEY" title="DOWNLOAD_COUNT_NODE_ID_GET_KEY :: "><span class="description">DOWNLOAD_COUNT_NODE_ID_GET_KEY</span><pre>DOWNLOAD_COUNT_NODE_ID_GET_KEY</pre></a></li>
+<li class="constant  "><a href="#constant_DOWNLOAD_COUNT_VERSION_ID_GET_KEY" title="DOWNLOAD_COUNT_VERSION_ID_GET_KEY :: "><span class="description">DOWNLOAD_COUNT_VERSION_ID_GET_KEY</span><pre>DOWNLOAD_COUNT_VERSION_ID_GET_KEY</pre></a></li>
+<li class="constant  "><a href="#constant_DRUPAL_ROOT" title="DRUPAL_ROOT :: "><span class="description">DRUPAL_ROOT</span><pre>DRUPAL_ROOT</pre></a></li>
+<li class="constant  "><a href="#constant_FEATURED_DOWNLOAD_TAG_TEXT" title="FEATURED_DOWNLOAD_TAG_TEXT :: "><span class="description">FEATURED_DOWNLOAD_TAG_TEXT</span><pre>FEATURED_DOWNLOAD_TAG_TEXT</pre></a></li>
+<li class="constant  "><a href="#constant_RELATED_FILES_DOWNLOADED_COUNT_THRESHOLD" title="RELATED_FILES_DOWNLOADED_COUNT_THRESHOLD :: "><span class="description">RELATED_FILES_DOWNLOADED_COUNT_THRESHOLD</span><pre>RELATED_FILES_DOWNLOADED_COUNT_THRESHOLD</pre></a></li>
+<li class="constant  "><a href="#constant_RELATED_FILES_VIEW_LIMIT" title="RELATED_FILES_VIEW_LIMIT :: "><span class="description">RELATED_FILES_VIEW_LIMIT</span><pre>RELATED_FILES_VIEW_LIMIT</pre></a></li>
 </ul>
 </div>
 <div class="span8 package-contents">
-<ul class="breadcrumb">
-<li>
-<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span>
-</li>
-<li class="active"><a href="../packages/DataFiles.html">DataFiles</a></li>
-</ul>
+<ul class="breadcrumb"><li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span><li class="active"><a href="../packages/DataFiles.html">DataFiles</a></li>
+</li></ul>
 <div class="package-indent">
 <h3>
 <i class="icon-custom icon-function"></i> Functions</h3>
-<a name="download_file_post_render" id="download_file_post_render"></a><div class="element clickable function  download_file_post_render" data-toggle="collapse" data-target=".download_file_post_render .collapse">
+<a id="function_download_file_post_render"></a><div class="element clickable function  function_download_file_post_render" data-toggle="collapse" data-target=".function_download_file_post_render .collapse">
 <h2>Re-writes the file links to display "human readable" filesize.</h2>
 <pre>download_file_post_render(string $content, array $element) : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>Function is added into the "post_render" stack by this module's
-implementation of hook_node_view_alter.</p></p>
+<div class="long_description"><p>Function is added into the "post_render" stack by this module's
+implementation of hook_node_view_alter.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$content</h4>
@@ -136,65 +129,68 @@ implementation of hook_node_view_alter.</p></p>
 necessary, but to avoid possibly breaking things, this is left in.</div>
 </div></div>
 </div>
-<a name="downloadable_file_admin_ajax_handler" id="downloadable_file_admin_ajax_handler"></a><div class="element clickable function  downloadable_file_admin_ajax_handler" data-toggle="collapse" data-target=".downloadable_file_admin_ajax_handler .collapse">
+<a id="function_downloadable_file_admin_ajax_handler"></a><div class="element clickable function  function_downloadable_file_admin_ajax_handler" data-toggle="collapse" data-target=".function_downloadable_file_admin_ajax_handler .collapse">
 <h2>Worker function called by all "button-driven" actions from the Administration
 page.</h2>
 <pre>downloadable_file_admin_ajax_handler(string[] $form, string[] $form_state) : string[]</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>At the end of each action, they return (or should return) feedback via the
-$form['status_area']['#description'] field.</p></p>
+<div class="long_description"><p>At the end of each action, they return (or should return) feedback via the
+$form['status_area']['#description'] field.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$form</h4>
-<code>string[]</code><p>Array defining the structure of the Admin page. This variable contains the status area which gets updated by each action.</p></div>
+<code>string[]</code><p>Array defining the structure of the Admin page. This
+variable contains the status area which gets updated by each action.</p></div>
 <div class="subelement argument">
 <h4>$form_state</h4>
-<code>string[]</code><p>Contains state information about the form's components, like which button is currently clicked.</p>
+<code>string[]</code><p>Contains state information about the form's
+components, like which button is currently clicked.</p>
 </div>
 <h3>Returns</h3>
 <div class="subelement response">
 <code>string[]</code>Status area component in the Admin  page</div>
 </div></div>
 </div>
-<a name="downloadable_file_admin_form" id="downloadable_file_admin_form"></a><div class="element clickable function  downloadable_file_admin_form" data-toggle="collapse" data-target=".downloadable_file_admin_form .collapse">
+<a id="function_downloadable_file_admin_form"></a><div class="element clickable function  function_downloadable_file_admin_form" data-toggle="collapse" data-target=".function_downloadable_file_admin_form .collapse">
 <h2>Function used to construct the Administration page for this
 module.</h2>
 <pre>downloadable_file_admin_form() : string[]</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response">
 <code>string[]</code>Render array defining the form.</div>
 </div></div>
 </div>
-<a name="downloadable_file_block_contents" id="downloadable_file_block_contents"></a><div class="element clickable function  downloadable_file_block_contents" data-toggle="collapse" data-target=".downloadable_file_block_contents .collapse">
+<a id="function_downloadable_file_block_contents"></a><div class="element clickable function  function_downloadable_file_block_contents" data-toggle="collapse" data-target=".function_downloadable_file_block_contents .collapse">
 <h2>Builder method for the html to be displayed in the "Related files" block.</h2>
 <pre>downloadable_file_block_contents(string $delta) : string[]</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$delta</h4>
-<code>string</code><p>Contextual information to check for to make sure this builds the html at the right time in the right place.</p></div>
+<code>string</code><p>Contextual information to check for to make sure this builds the html
+at the right time in the right place.</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
 <code>string[]</code>Markup array consisting of html.</div>
 </div></div>
 </div>
-<a name="downloadable_file_views_query_alter" id="downloadable_file_views_query_alter"></a><div class="element clickable function  downloadable_file_views_query_alter" data-toggle="collapse" data-target=".downloadable_file_views_query_alter .collapse">
+<a id="function_downloadable_file_views_query_alter"></a><div class="element clickable function  function_downloadable_file_views_query_alter" data-toggle="collapse" data-target=".function_downloadable_file_views_query_alter .collapse">
 <h2>Drupal 7 implementation of hook_views_query_alter.</h2>
 <pre>downloadable_file_views_query_alter(object $view, object $query) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>This implementation alters filtered queries in the "Downloads/Data files"
+<div class="long_description"><p>This implementation alters filtered queries in the "Downloads/Data files"
 view. It allows a user to filter by a term in the file type taxonomy
-and get matches for that term AND its child terms.</p></p>
+and get matches for that term AND its child terms.</p></div>
 <table class="table table-bordered"><tr>
 <th>see</th>
-<td>\global\hook_views_query_alter(&$view,</td>
+<td><a href="">&amp;$query)</a></td>
 </tr></table>
 <h3>Parameters</h3>
 <div class="subelement argument">
@@ -205,14 +201,14 @@ and get matches for that term AND its child terms.</p></p>
 <code>object</code><p>Drupal query object.</p></div>
 </div></div>
 </div>
-<a name="errAdd" id="errAdd"></a><div class="element clickable function  errAdd" data-toggle="collapse" data-target=".errAdd .collapse">
+<a id="function_errAdd"></a><div class="element clickable function  function_errAdd" data-toggle="collapse" data-target=".function_errAdd .collapse">
 <h2>Convenience method to add an error message to an error array map.</h2>
 <pre>errAdd(string $element, string $msg, int[] | string[] $errArray) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>This is geared for use in the Drupal forms, where the "element" is the
+<div class="long_description"><p>This is geared for use in the Drupal forms, where the "element" is the
 name of the UI element that the error applies to. msg is the message, and
-the errArray is the pass-by-reference variable to hold the message.</p></p>
+the errArray is the pass-by-reference variable to hold the message.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$element</h4>
@@ -222,23 +218,38 @@ the errArray is the pass-by-reference variable to hold the message.</p></p>
 <code>string</code><p>Error message.</p></div>
 <div class="subelement argument">
 <h4>$errArray</h4>
-<code>int[]</code><code>string[]</code><p>Array that holds the errors. These are added by reference.</p></div>
+<code>int[]</code><code>string[]</code><p>Array that holds the errors. These are added by
+reference.</p></div>
 </div></div>
 </div>
-<a name="getFileSizeHumanReadable" id="getFileSizeHumanReadable"></a><div class="element clickable function  getFileSizeHumanReadable" data-toggle="collapse" data-target=".getFileSizeHumanReadable .collapse">
+<a id="function_fixMungedFilenames"></a><div class="element clickable function  function_fixMungedFilenames" data-toggle="collapse" data-target=".function_fixMungedFilenames .collapse">
+<h2>Fixes the filenames download nodes that have been "munged" (filename has a
+"_." in it).</h2>
+<pre>fixMungedFilenames() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Returns a html formatted status results string that is used to
+display feedback of what happened in this method.</div>
+</div></div>
+</div>
+<a id="function_getFileSizeHumanReadable"></a><div class="element clickable function  function_getFileSizeHumanReadable" data-toggle="collapse" data-target=".function_getFileSizeHumanReadable .collapse">
 <h2>Convenience method to calculate, in human-readable text, the
 size of something given the bytes and precision.</h2>
 <pre>getFileSizeHumanReadable(int $bytes, int $precision) : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$bytes</h4>
 <code>int</code><p>Number of bytes to convert.</p></div>
 <div class="subelement argument">
 <h4>$precision</h4>
-<code>int</code><p>How many decimal places to be specific to. default is set to 2.</p></div>
+<code>int</code><p>How many decimal places to be specific to.
+default is set to 2.</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
 <code>string</code>Human readable string of the size given. Values will be
@@ -247,33 +258,34 @@ given, returned value will not be correct, it will return that same
 number as B.</div>
 </div></div>
 </div>
-<a name="getShortNames" id="getShortNames"></a><div class="element clickable function  getShortNames" data-toggle="collapse" data-target=".getShortNames .collapse">
+<a id="function_getShortNames"></a><div class="element clickable function  function_getShortNames" data-toggle="collapse" data-target=".function_getShortNames .collapse">
 <h2>Simple getter that returns a map from common orgnism shortnames to their
 full names in "genus-species" format.</h2>
 <pre>getShortNames() </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>This function was specifically designed
-for the Download Files Name format.</p></p>
+<div class="long_description"><p>This function was specifically designed
+for the Download Files Name format.</p></div>
 <table class="table table-bordered"><tr>
 <th>todo</th>
 <td>Might remove this b/c the names no longer follow the name format.</td>
 </tr></table>
 </div></div>
 </div>
-<a name="getSortedFiles" id="getSortedFiles"></a><div class="element clickable function  getSortedFiles" data-toggle="collapse" data-target=".getSortedFiles .collapse">
+<a id="function_getSortedFiles"></a><div class="element clickable function  function_getSortedFiles" data-toggle="collapse" data-target=".function_getSortedFiles .collapse">
 <h2>Returns a max heap object of ranked files.</h2>
 <pre>getSortedFiles(int | string $organismId, int | string $tagId, int $limit) : <a href="../classes/DownloadSimpleHeap.html">\DownloadSimpleHeap</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$organismId</h4>
 <code>int</code><code>string</code><p>Organism taxonomy id to be ranked on.</p></div>
 <div class="subelement argument">
 <h4>$tagId</h4>
-<code>int</code><code>string</code><p>(Optional) $tagId Taxon Id of a Tag that is used by downloads to promote certain files over others.</p>
+<code>int</code><code>string</code><p>(Optional) $tagId Taxon Id of a Tag that is used by downloads to
+promote certain files over others.</p>
 </div>
 <div class="subelement argument">
 <h4>$limit</h4>
@@ -284,16 +296,16 @@ for the Download Files Name format.</p></p>
 <code><a href="../classes/DownloadSimpleHeap.html">\DownloadSimpleHeap</a></code>A max heap object of ranked files (drupal nodes).</div>
 </div></div>
 </div>
-<a name="getUniqueListOrgTidsFromDownloads" id="getUniqueListOrgTidsFromDownloads"></a><div class="element clickable function  getUniqueListOrgTidsFromDownloads" data-toggle="collapse" data-target=".getUniqueListOrgTidsFromDownloads .collapse">
+<a id="function_getUniqueListOrgTidsFromDownloads"></a><div class="element clickable function  function_getUniqueListOrgTidsFromDownloads" data-toggle="collapse" data-target=".function_getUniqueListOrgTidsFromDownloads .collapse">
 <h2>Returns unique list of organisms referenced in exisiting data files (downloads).</h2>
 <pre>getUniqueListOrgTidsFromDownloads() : string[] | int[]</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"><p>Utility method designed to scan all nodes classified as "downloadable_file"s,
+<div class="long_description"><p>Utility method designed to scan all nodes classified as "downloadable_file"s,
 and return a unique list of organism taxon ids from the organism taxonomy.
 Each taxon id returned has at least one "downloadable_file" node that exsits
 in drupal. This method is used to display a shortened, relevant list of
-organisms available to filter on in the "Data files" (downlaods) view.</p></p>
+organisms available to filter on in the "Data files" (downlaods) view.</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
 <code>string[]</code><code>int[]</code>List of organism taxon ids.</div>
@@ -301,7 +313,7 @@ organisms available to filter on in the "Data files" (downlaods) view.</p></p>
 </div>
 <h3>
 <i class="icon-custom icon-class"></i> Classes and interfaces</h3>
-<a name="DownloadSimpleHeap" id="DownloadSimpleHeap"></a><div class="element ajax clickable class" href="../classes/DownloadSimpleHeap.html">
+<div id="DownloadSimpleHeap" class="element ajax clickable class">
 <h1>DownloadSimpleHeap<a href="../classes/DownloadSimpleHeap.html">¶</a>
 </h1>
 <p class="short_description">This extension of the SplHeap overrides the compare function to
@@ -311,78 +323,79 @@ allow us to "rank" our "Data file/Download" nodes.</p>
 </div>
 <h3>
 <i class="icon-custom icon-constant"></i> Constants</h3>
-<a name="DATA_FILE_DOWNLOAD_LINK_CSS_CLASS" id="DATA_FILE_DOWNLOAD_LINK_CSS_CLASS"> </a><div class="element clickable constant  DATA_FILE_DOWNLOAD_LINK_CSS_CLASS" data-toggle="collapse" data-target=".DATA_FILE_DOWNLOAD_LINK_CSS_CLASS .collapse">
-<h2>CSS class used by jquery to locate file downloads and
-increment the download count.</h2>
+<a id="constant_DATA_FILE_DOWNLOAD_LINK_CSS_CLASS"> </a><div class="element clickable constant  constant_DATA_FILE_DOWNLOAD_LINK_CSS_CLASS" data-toggle="collapse" data-target=".constant_DATA_FILE_DOWNLOAD_LINK_CSS_CLASS .collapse">
+<h2>DATA_FILE_DOWNLOAD_LINK_CSS_CLASS</h2>
 <pre>DATA_FILE_DOWNLOAD_LINK_CSS_CLASS </pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="DB_PASSWORD" id="DB_PASSWORD"> </a><div class="element clickable constant  DB_PASSWORD" data-toggle="collapse" data-target=".DB_PASSWORD .collapse">
-<h2>Password for the DB_USER.</h2>
+<a id="constant_DATA_FILE_NODE_VIEW_BASENAME"> </a><div class="element clickable constant  constant_DATA_FILE_NODE_VIEW_BASENAME" data-toggle="collapse" data-target=".constant_DATA_FILE_NODE_VIEW_BASENAME .collapse">
+<h2>DATA_FILE_NODE_VIEW_BASENAME</h2>
+<pre>DATA_FILE_NODE_VIEW_BASENAME </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_DB_PASSWORD"> </a><div class="element clickable constant  constant_DB_PASSWORD" data-toggle="collapse" data-target=".constant_DB_PASSWORD .collapse">
+<h2>DB_PASSWORD</h2>
 <pre>DB_PASSWORD </pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="DB_USER" id="DB_USER"> </a><div class="element clickable constant  DB_USER" data-toggle="collapse" data-target=".DB_USER .collapse">
-<h2>Public user in the drupal database that is allowed to issue SELECT queries.</h2>
+<a id="constant_DB_USER"> </a><div class="element clickable constant  constant_DB_USER" data-toggle="collapse" data-target=".constant_DB_USER .collapse">
+<h2>DB_USER</h2>
 <pre>DB_USER </pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="DL_COUNT_TAG" id="DL_COUNT_TAG"> </a><div class="element clickable constant  DL_COUNT_TAG" data-toggle="collapse" data-target=".DL_COUNT_TAG .collapse">
+<a id="constant_DL_COUNT_TAG"> </a><div class="element clickable constant  constant_DL_COUNT_TAG" data-toggle="collapse" data-target=".constant_DL_COUNT_TAG .collapse">
 <h2>DL_COUNT_TAG</h2>
 <pre>DL_COUNT_TAG </pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="DOWNLOAD_COUNT_NODE_ID_GET_KEY" id="DOWNLOAD_COUNT_NODE_ID_GET_KEY"> </a><div class="element clickable constant  DOWNLOAD_COUNT_NODE_ID_GET_KEY" data-toggle="collapse" data-target=".DOWNLOAD_COUNT_NODE_ID_GET_KEY .collapse">
-<h2>Node id key name for the file increment php counter.</h2>
+<a id="constant_DOWNLOAD_COUNT_NODE_ID_GET_KEY"> </a><div class="element clickable constant  constant_DOWNLOAD_COUNT_NODE_ID_GET_KEY" data-toggle="collapse" data-target=".constant_DOWNLOAD_COUNT_NODE_ID_GET_KEY .collapse">
+<h2>DOWNLOAD_COUNT_NODE_ID_GET_KEY</h2>
 <pre>DOWNLOAD_COUNT_NODE_ID_GET_KEY </pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="DOWNLOAD_COUNT_VERSION_ID_GET_KEY" id="DOWNLOAD_COUNT_VERSION_ID_GET_KEY"> </a><div class="element clickable constant  DOWNLOAD_COUNT_VERSION_ID_GET_KEY" data-toggle="collapse" data-target=".DOWNLOAD_COUNT_VERSION_ID_GET_KEY .collapse">
-<h2>Version id key name for the file increment php counter.</h2>
+<a id="constant_DOWNLOAD_COUNT_VERSION_ID_GET_KEY"> </a><div class="element clickable constant  constant_DOWNLOAD_COUNT_VERSION_ID_GET_KEY" data-toggle="collapse" data-target=".constant_DOWNLOAD_COUNT_VERSION_ID_GET_KEY .collapse">
+<h2>DOWNLOAD_COUNT_VERSION_ID_GET_KEY</h2>
 <pre>DOWNLOAD_COUNT_VERSION_ID_GET_KEY </pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="DRUPAL_ROOT" id="DRUPAL_ROOT"> </a><div class="element clickable constant  DRUPAL_ROOT" data-toggle="collapse" data-target=".DRUPAL_ROOT .collapse">
+<a id="constant_DRUPAL_ROOT"> </a><div class="element clickable constant  constant_DRUPAL_ROOT" data-toggle="collapse" data-target=".constant_DRUPAL_ROOT .collapse">
 <h2>DRUPAL_ROOT</h2>
 <pre>DRUPAL_ROOT </pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="FEATURED_DOWNLOAD_TAG_TEXT" id="FEATURED_DOWNLOAD_TAG_TEXT"> </a><div class="element clickable constant  FEATURED_DOWNLOAD_TAG_TEXT" data-toggle="collapse" data-target=".FEATURED_DOWNLOAD_TAG_TEXT .collapse">
-<h2>Display string of the 'Featured Download' tag (actually a taxon in the
-tags taxonomy).</h2>
+<a id="constant_FEATURED_DOWNLOAD_TAG_TEXT"> </a><div class="element clickable constant  constant_FEATURED_DOWNLOAD_TAG_TEXT" data-toggle="collapse" data-target=".constant_FEATURED_DOWNLOAD_TAG_TEXT .collapse">
+<h2>FEATURED_DOWNLOAD_TAG_TEXT</h2>
 <pre>FEATURED_DOWNLOAD_TAG_TEXT </pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"><p>This is used to retrieve the taxon object itself from drupal
-to get the taxon id, which is used in other queries.</p></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="RELATED_FILES_DOWNLOADED_COUNT_THRESHOLD" id="RELATED_FILES_DOWNLOADED_COUNT_THRESHOLD"> </a><div class="element clickable constant  RELATED_FILES_DOWNLOADED_COUNT_THRESHOLD" data-toggle="collapse" data-target=".RELATED_FILES_DOWNLOADED_COUNT_THRESHOLD .collapse">
-<h2>Threshold value for minimum number of times a file is downloaded before it
-becomes 'more important'.</h2>
+<a id="constant_RELATED_FILES_DOWNLOADED_COUNT_THRESHOLD"> </a><div class="element clickable constant  constant_RELATED_FILES_DOWNLOADED_COUNT_THRESHOLD" data-toggle="collapse" data-target=".constant_RELATED_FILES_DOWNLOADED_COUNT_THRESHOLD .collapse">
+<h2>RELATED_FILES_DOWNLOADED_COUNT_THRESHOLD</h2>
 <pre>RELATED_FILES_DOWNLOADED_COUNT_THRESHOLD </pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a name="RELATED_FILES_VIEW_LIMIT" id="RELATED_FILES_VIEW_LIMIT"> </a><div class="element clickable constant  RELATED_FILES_VIEW_LIMIT" data-toggle="collapse" data-target=".RELATED_FILES_VIEW_LIMIT .collapse">
-<h2>How many files are to be dispalyed in the 'Related files' block on organism
-pages.</h2>
+<a id="constant_RELATED_FILES_VIEW_LIMIT"> </a><div class="element clickable constant  constant_RELATED_FILES_VIEW_LIMIT" data-toggle="collapse" data-target=".constant_RELATED_FILES_VIEW_LIMIT .collapse">
+<h2>RELATED_FILES_VIEW_LIMIT</h2>
 <pre>RELATED_FILES_VIEW_LIMIT </pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 </div>
 </div>
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
-            generated on 2012-12-04T13:32:14-05:00.<br></footer></div>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-03-08T15:18:41-05:00.<br></footer></div>
 </div>
 </body>
 </html>

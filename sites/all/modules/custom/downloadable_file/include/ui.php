@@ -1,11 +1,11 @@
 <?php
 /**
-* This file contains all the support functions realted to rendering pages,
-* generating html, etc that are part of the data file (downloadable_file) module. 
-* 
-* @package DataFiles
-* @filesource
-*/
+ * This file contains all the support functions realted to rendering pages,
+ * generating html, etc that are part of the data file (downloadable_file) module. 
+ * 
+ * @package DataFiles
+ * @filesource
+ */
 
 
 require_once('constants.php');
@@ -13,102 +13,102 @@ require_once('utilities.php');
 
 
 /**
-* Function used to construct the Administration page for this
-* module.
-* 
-* @return string[] Render array defining the form.
-*/
+ * Function used to construct the Administration page for this
+ * module.
+ * 
+ * @return string[] Render array defining the form.
+ */
 function downloadable_file_admin_form() {
 
-   $form['status_area'] = array(
-            '#title' => 'Status',
-            '#prefix' => '<div id="status-div">',
-            '#suffix' => '</div>',
-            '#type' => 'fieldset',
-            '#description' => 'Status.',
+	$form['status_area'] = array(
+			'#title' => 'Status',
+			'#prefix' => '<div id="status-div">',
+			'#suffix' => '</div>',
+			'#type' => 'fieldset',
+			'#description' => 'Status.',
 
-   );
+			);
 
-   /*$form['convert_names'] = array(
-            '#type' => 'button',
-            '#value' => t('Convert Names'),
-            '#ajax' => array(
-                     'callback' => 'downloadable_file_admin_ajax_handler',
-                     'method' => 'replace',
-                     'effect' => 'fade',
-                     'progress' => array('type' => 'throbber', 'message' => t('Converting Names')),
-                     'wrapper' => 'status-div',
-            )
-   );*/
+	/*$form['convert_names'] = array(
+	  '#type' => 'button',
+	  '#value' => t('Convert Names'),
+	  '#ajax' => array(
+	  'callback' => 'downloadable_file_admin_ajax_handler',
+	  'method' => 'replace',
+	  'effect' => 'fade',
+	  'progress' => array('type' => 'throbber', 'message' => t('Converting Names')),
+	  'wrapper' => 'status-div',
+	  )
+	  );*/
 
-   $form['clear_featured_tags'] = array(
-            '#type' => 'button',
-            '#value' => t('Clear \'Featured Download\' Tags'),
-            '#ajax' => array(
-                     'callback' => 'downloadable_file_admin_ajax_handler',
-                     'method' => 'replace',
-                     'effect' => 'fade',
-                     'progress' => array('type' => 'throbber', 'message' => t('Clearing tags')),
-                     'wrapper' => 'status-div',
-            )
-   );
+	$form['clear_featured_tags'] = array(
+			'#type' => 'button',
+			'#value' => t('Clear \'Featured Download\' Tags'),
+			'#ajax' => array(
+				'callback' => 'downloadable_file_admin_ajax_handler',
+				'method' => 'replace',
+				'effect' => 'fade',
+				'progress' => array('type' => 'throbber', 'message' => t('Clearing tags')),
+				'wrapper' => 'status-div',
+				)
+			);
 
-   $form['reset_counts_button'] = array(
-            '#type' => 'button',
-            '#value' => t('Reset All Download Counts'),
-            '#ajax' => array(
-                     'callback' => 'downloadable_file_admin_ajax_handler',
-                     'method' => 'replace',
-                     'effect' => 'fade',
-                     'progress' => array('type' => 'throbber', 'message' => t('Resetting counts')),
-                     'wrapper' => 'status-div',
-            )
-   );
+	$form['reset_counts_button'] = array(
+			'#type' => 'button',
+			'#value' => t('Reset All Download Counts'),
+			'#ajax' => array(
+				'callback' => 'downloadable_file_admin_ajax_handler',
+				'method' => 'replace',
+				'effect' => 'fade',
+				'progress' => array('type' => 'throbber', 'message' => t('Resetting counts')),
+				'wrapper' => 'status-div',
+				)
+			);
 
-   $form['view_rankings_button'] = array(
-            '#type' => 'button',
-            '#value' => t('View Top 10 Files for Species'),
-            '#ajax' => array(
-                     'callback' => 'downloadable_file_admin_ajax_handler',
-                     'method' => 'replace',
-                     'effect' => 'fade',
-                     'progress' => array('type' => 'throbber', 'message' => t('Fetching rankings')),
-                     'wrapper' => 'status-div',
-            )
-   );
+	$form['view_rankings_button'] = array(
+			'#type' => 'button',
+			'#value' => t('View Top 10 Files for Species'),
+			'#ajax' => array(
+				'callback' => 'downloadable_file_admin_ajax_handler',
+				'method' => 'replace',
+				'effect' => 'fade',
+				'progress' => array('type' => 'throbber', 'message' => t('Fetching rankings')),
+				'wrapper' => 'status-div',
+				)
+			);
 
-  $form['fix_munged_filenames'] = array(
-            '#type' => 'button',
-            '#value' => t('Fix munged filenames'),
-            '#ajax' => array(
-                     'callback' => 'downloadable_file_admin_ajax_handler',
-                     'method' => 'replace',
-                     'effect' => 'fade',
-                     'progress' => array('type' => 'throbber', 'message' => t('Fixing munged filenames')),
-                     'wrapper' => 'status-div',
-            )
-   );
+	$form['fix_munged_filenames'] = array(
+			'#type' => 'button',
+			'#value' => t('Fix munged filenames'),
+			'#ajax' => array(
+				'callback' => 'downloadable_file_admin_ajax_handler',
+				'method' => 'replace',
+				'effect' => 'fade',
+				'progress' => array('type' => 'throbber', 'message' => t('Fixing munged filenames')),
+				'wrapper' => 'status-div',
+				)
+			);
 
 
 
-   return $form;
+	return $form;
 }
 
 
 /** 
-* Worker function called by all "button-driven" actions from the Administration
-* page.
-* 
-* At the end of each action, they return (or should return) feedback via the 
-* $form['status_area']['#description'] field.
-*
-* @param string[] $form Array defining the structure of the Admin page. This
-* variable contains the status area which gets updated by each action.
-* @param string[] $form_state Contains state information about the form's
-* components, like which button is currently clicked.
-*
-* @return string[] Status area component in the Admin  page
-*/
+ * Worker function called by all "button-driven" actions from the Administration
+ * page.
+ * 
+ * At the end of each action, they return (or should return) feedback via the 
+ * $form['status_area']['#description'] field.
+ *
+ * @param string[] $form Array defining the structure of the Admin page. This
+ * variable contains the status area which gets updated by each action.
+ * @param string[] $form_state Contains state information about the form's
+ * components, like which button is currently clicked.
+ *
+ * @return string[] Status area component in the Admin  page
+ */
 function downloadable_file_admin_ajax_handler($form, $form_state) {
 
 	switch ($form_state['clicked_button']['#value']) {
@@ -216,13 +216,13 @@ function downloadable_file_admin_ajax_handler($form, $form_state) {
 }
 
 /**
-* Builder method for the html to be displayed in the "Related files" block.
-*
-* @param string $delta Contextual information to check for to make sure this builds the html
-* at the right time in the right place.
-* 
-* @return string[] Markup array consisting of html.
-*/
+ * Builder method for the html to be displayed in the "Related files" block.
+ *
+ * @param string $delta Contextual information to check for to make sure this builds the html
+ * at the right time in the right place.
+ * 
+ * @return string[] Markup array consisting of html.
+ */
 function downloadable_file_block_contents($delta) {
 
 	switch($delta) {
@@ -254,17 +254,21 @@ function downloadable_file_block_contents($delta) {
 							$fileNames .= '">More...</a></li>';
 							break;
 						}
-						$fileNames .= '<li><a href="/node/';
-						$fileNames .= $file->nid;
-						$fileNames .= '" nid="';
-						$fileNames .= $file->nid;	
-						$fileNames .= '" vid="';
-						$fileNames .= $file->vid;
-						$fileNames .= '">';
-						$fileNames .= $file->title;
+
+						$q = db_select('url_alias', 'a');
+						$q->addField('a', 'alias');
+						$q->condition('a.source', "node/{$file->nid}", '=');
+						$results = $q->execute()->fetchAssoc();
+						$url_download = '';
+						$url_alias = '';
+						if($results !== FALSE) {
+							$url_alias = $results['alias'];
+							$url_download = str_replace('content', 'downloads', $results['alias']);
+						}
+
 						$fileSize = getFileSizeHumanReadable($file->filesize);
-						$fileNames .= " | $fileSize";
-						$fileNames .= '</a></li>';
+						$fileNames .= "<li><a href=\"/$url_alias\">{$file->title}</a> | ";
+						$fileNames .= "<a href=\"/$url_download\">Download ($fileSize)</a></li>";
 
 					}
 					$fileNames .= '</ul>';

@@ -1,3 +1,11 @@
+VectorBase developers:
+Please place unmodified (or minimally modified/configured),
+3rd party ("contributed") modules in the directory called "added". 
+Place any of your own custom modules in "custom". There should NOT be 
+anything else in this directory, in spite of the horrible sprawl that currently exists here.
+
+Generic drupal message:
+
 Place downloaded and custom modules that extend your site functionality beyond
 Drupal core in this directory to ensure clean separation from core modules and
 to facilitate safe, self-contained code updates. Contributed modules from the
